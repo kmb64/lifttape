@@ -1,102 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
     <title>Lift Tape</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <style>
-        html,
-        body,
-        div,
-        h1,
-        p,
-        a,
-        video {
-            margin: 0;
-            padding: 0;
-        }
 
-        html,
-        body {
-            height: 100%;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color : #3d464d;
-        }
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        .video {
-            width: 100%;
-            height: 100%;
-            background : url(loader.svg) center center no-repeat;
-        }
-
-        .content {
-            padding-top : 100px;
-            text-align: center;
-            display: inline-block;
-            left: 0;
-            right: 0;
-            top : 0;
-            margin-left: auto;
-            margin-right: auto;
-            position : absolute;
-            z-index: 2;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .content img {
-            margin : 10px 0;
-        }
-
-        .content p {
-            margin : 10px 0;
-        }
-
-        .content a {
-            color : #3d464d;
-        }
-
-    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-<video id="video" class="video" muted src="lifttape.mp4"></video>
+<div class="container">
+    <div class="jumbotron">
+        <img class="img-responsive" src="lifttape.jpg" alt="Lift Tape logo"/>
+        <p class="lead">Online shop coming soon</p>
+        <p>Pre orders available via
+            <a href="https://www.facebook.com/lifttape">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                Facebook</a> or
+            <a href="https://www.instagram.com/lifttape/">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                Instagram</a></p>
+    </div>
 
-<div id="content" class="content hidden">
+    <div class="row marketing">
+        <div class="col-lg-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UwmGF_shWHk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-    <img src ="lifttape.jpg" width="200"  alt="Lift Tape logo"/>
+    </div>
 
-    <p>Online shop coming soon</p>
-
-    <p>Pre orders available via <a href="https://www.facebook.com/lifttape">Facebook</a> or <a href="https://www.instagram.com/lifttape/">Instagram</a></p>
-
-</div>
-
-<script>
-    (function() {
-        /**
-         * Video element
-         * @type {HTMLElement}
-         */
-        var video = document.getElementById('video');
-        var content = document.getElementById('content');
-
-        /**
-         * Check if video can play, and play it
-         */
-        video.addEventListener('canplaythrough', function() {
-            video.play();
-        });
-
-        video.addEventListener('ended', function() {
-           content.setAttribute('class', 'content animated fadeIn');
-        });
-    })();
-</script>
+</div> <!-- /container -->
 
 
 </body>
