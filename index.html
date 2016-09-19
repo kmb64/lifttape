@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lift Tape</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <style>
+        html,
+        body,
+        div,
+        h1,
+        p,
+        a,
+        video {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color : #3d464d;
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+            background : url(loader.svg) center center no-repeat;
+        }
+
+        .content {
+            padding-top : 100px;
+            text-align: center;
+            display: inline-block;
+            left: 0;
+            right: 0;
+            top : 0;
+            margin-left: auto;
+            margin-right: auto;
+            position : absolute;
+            z-index: 2;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .content img {
+            margin : 10px 0;
+        }
+
+        .content p {
+            margin : 10px 0;
+        }
+
+        .content a {
+            color : #3d464d;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<video id="video" class="video" muted src="lifttape.mp4"></video>
+
+<div id="content" class="content hidden">
+
+    <img src ="lifttape.jpg" width="200"  alt="Lift Tape logo"/>
+
+    <p>Online shop coming soon</p>
+
+    <p>Pre orders available via <a href="https://www.facebook.com/lifttape">Facebook</a> or <a href="https://www.instagram.com/lifttape/">Instagram</a></p>
+
+</div>
+
+<script>
+    (function() {
+        /**
+         * Video element
+         * @type {HTMLElement}
+         */
+        var video = document.getElementById('video');
+        var content = document.getElementById('content');
+
+        /**
+         * Check if video can play, and play it
+         */
+        video.addEventListener('canplaythrough', function() {
+            video.play();
+        });
+
+        video.addEventListener('ended', function() {
+           content.setAttribute('class', 'content animated fadeIn');
+        });
+    })();
+</script>
+
+
+</body>
+</html>
